@@ -382,7 +382,7 @@ function pasangGrafik() {
     credits: { enabled: false }, // tanda "Highcharts.com" di pojok dimatikan
     plotOptions: {
       pie: {
-        innerSize: "5%", // lubang tengah → jadi diagram donat
+        innerSize: "10%", // lubang tengah → jadi diagram donat
         dataLabels: {
           enabled: true,
           format: "{point.name}: <b>{point.y}</b>",
