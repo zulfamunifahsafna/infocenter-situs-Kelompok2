@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang | InfoCenter</title>
+    <meta
+      name="description"
+      content="Tentang InfoCenter: profil, visi misi, tujuan, fitur, dan FAQ."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-halaman="tentang">
+    <a class="tautan-lompat" href="#konten">Lewati ke konten</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="isi-navbar">
+        <a class="logo" href="index.html">Info<span>Center.</span></a>
+
+        <nav class="menu" id="menu" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+
+          <div class="item-katalog">
+            <button
+              class="tombol-katalog"
+              id="tombolKatalog"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Buka menu katalog"
+            >
+              Katalog
+              <svg
+                class="ikon-pilih"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              class="menu-katalog"
+              id="menuKatalog"
+              aria-label="Kategori katalog"
+            >
+              <a href="beasiswa.html">Beasiswa</a>
+              <a href="lomba.html">Lomba</a>
+            </div>
+          </div>
+
+          <a href="dashboard.html">Dashboard</a>
+          <a href="peta.html">Peta</a>
+          <a href="kirim-info.html">Kirim Info</a>
+          <a href="tentang.html" class="active">Tentang</a>
+        </nav>
+
+        <button
+          class="tombol-menu"
+          id="tombolMenu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Buka atau tutup menu"
+        >
+          <svg
+            class="ikon-buka"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            class="ikon-tutup"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- ================= HERO (isi teks dari arsip tentang.html) ================= -->
+      <section class="hero">
+        <div class="isian-lebar">
+          <div class="hero-kiri">
+            <p class="mata-kata">STUDENT OPPORTUNITY PLATFORM</p>
+            <h1>Membuka peluang,<br /><span>mewujudkan impian.</span></h1>
+            <p>
+              Setiap mahasiswa memiliki kesempatan untuk berkembang. InfoCenter
+              hadir untuk menghubungkanmu dengan peluang beasiswa, kompetisi,
+              dan pengalaman berharga untuk masa depan yang lebih baik.
+            </p>
+            <div class="hero-aksi">
+              <a class="tombol tombol-rust" href="#tentang-kami">Kenali kami</a>
+              <a class="tombol" href="#fitur">Jelajahi fitur</a>
+            </div>
+          </div>
+
+          <div class="bingkai-foto hero-foto">
+            <img
+              src="assets/foto-beasiswa.jpg"
+              alt="Mahasiswa sedang berjalan bersama di kampus"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STATISTIK (angka target dari arsip lama) ================= -->
+      <section class="strip-statistik" aria-label="Statistik target">
+        <article class="item-statistik">
+          <h2>150+</h2>
+          <p>Target info beasiswa</p>
+        </article>
+        <article class="item-statistik">
+          <h2>50+</h2>
+          <p>Target info lomba</p>
+        </article>
+        <article class="item-statistik">
+          <h2>1.000+</h2>
+          <p>Target pengguna</p>
+        </article>
+        <article class="item-statistik">
+          <h2>24/7</h2>
+          <p>Akses informasi</p>
+        </article>
+      </section>
+      <p
+        class="keterangan-bagian"
+        style="max-width: 1160px; margin: 14px auto 0; padding: 0 24px"
+      >
+        Angka di atas adalah target aspiratif dari arsip proyek, bukan data
+        terverifikasi. Angka data yang benar-benar tersedia ada di dashboard.
+      </p>
+
+      <!-- ================= TENTANG KAMI ================= -->
+      <section class="bagian tentang-grid" id="tentang-kami">
+        <article class="kartu">
+          <p class="mata-kata">TENTANG INFOCENTER</p>
+          <h3>Satu platform, beragam kesempatan.</h3>
+          <p>
+            InfoCenter merupakan situs pusat informasi yang dirancang untuk
+            memudahkan mahasiswa menemukan kesempatan pengembangan diri.
+          </p>
+          <p>
+            Melalui satu platform, pengguna dapat memperoleh informasi mengenai
+            program beasiswa, kompetisi, kegiatan akademik, serta peluang
+            pengembangan kemampuan.
+          </p>
+          <p>
+            Kami percaya setiap mahasiswa memiliki potensi untuk berprestasi.
+            Informasi yang tepat bisa menjadi langkah awal mewujudkan masa depan
+            yang lebih baik.
+          </p>
+        </article>
+
+        <article class="kotak-penjelas">
+          <p class="mata-kata" style="color: #e9b69f">OUR PURPOSE</p>
+          <h3>Menghubungkan potensi dengan kesempatan.</h3>
+          <p>
+            Karena setiap kesempatan dapat menjadi awal dari sebuah pencapaian
+            besar.
+          </p>
+        </article>
+      </section>
+
+      <!-- ================= VISI MISI ================= -->
+      <section class="bagian">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">OUR DIRECTION</p>
+            <h2>Visi dan Misi Kami</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Landasan InfoCenter dalam menghadirkan informasi yang bermanfaat.
+          </p>
+        </div>
+
+        <div class="grid-dua">
+          <article class="kartu-info">
+            <span class="bilangan">✦</span>
+            <h3>Visi</h3>
+            <p>
+              Menjadi platform informasi yang mudah diakses, informatif, dan
+              bermanfaat dalam membantu mahasiswa menemukan peluang pendidikan
+              dan pengembangan diri.
+            </p>
+          </article>
+
+          <article class="kartu-info">
+            <span class="bilangan">✦</span>
+            <h3>Misi</h3>
+            <ul>
+              <li>Menyediakan informasi beasiswa secara terstruktur.</li>
+              <li>Menghadirkan informasi kompetisi mahasiswa.</li>
+              <li>Mempermudah pencarian peluang berdasarkan kategori.</li>
+              <li>Membantu mahasiswa mengetahui deadline pendaftaran.</li>
+              <li>Mendorong pengembangan potensi dan prestasi mahasiswa.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= TUJUAN ================= -->
+      <section class="bagian">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">OUR PURPOSE</p>
+            <h2>Mengapa InfoCenter Hadir?</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Menjadikan pencarian informasi peluang lebih praktis dan terarah.
+          </p>
+        </div>
+
+        <div class="grid-empat">
+          <article class="kartu-info">
+            <span class="bilangan">01</span>
+            <h3>Akses informasi</h3>
+            <p>Menemukan informasi peluang pendidikan dalam satu tempat.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">02</span>
+            <h3>Pengembangan potensi</h3>
+            <p>Mendorong mahasiswa tumbuh akademik maupun non-akademik.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">03</span>
+            <h3>Kesempatan berprestasi</h3>
+            <p>Memperluas kesempatan mengikuti kompetisi.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">04</span>
+            <h3>Informasi terarah</h3>
+            <p>
+              Hadir dengan persyaratan, kategori, dan batas waktu pendaftaran.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= FITUR UNGGULAN ================= -->
+      <section class="bagian" id="fitur">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">WHAT WE OFFER</p>
+            <h2>Fitur Unggulan</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Fitur yang membuat mencari peluang jadi lebih mudah.
+          </p>
+        </div>
+
+        <div class="grid-tiga">
+          <article class="kartu-info">
+            <h3>Informasi Beasiswa</h3>
+            <p>Temukan beasiswa berdasar jenjang, kategori, dan persyaratan.</p>
+            <a class="tautan-info" href="beasiswa.html">Jelajahi beasiswa →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Informasi Lomba</h3>
+            <p>Temukan kompetisi akademik dan non-akademik untuk prestasimu.</p>
+            <a class="tautan-info" href="lomba.html">Jelajahi lomba →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Peta Peluang</h3>
+            <p>Lihat lokasi penyelenggara langsung di peta.</p>
+            <a class="tautan-info" href="peta.html">Buka peta →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Deadline Pendaftaran</h3>
+            <p>Pantau batas waktu agar tidak melewatkan kesempatan.</p>
+            <a class="tautan-info" href="dashboard.html">Lihat dashboard →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Kirim Informasi</h3>
+            <p>Usulkan informasi beasiswa atau lomba baru untuk situs ini.</p>
+            <a class="tautan-info" href="kirim-info.html">Kirim usulan →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Pencarian Cepat</h3>
+            <p>Cari dari halaman beranda; hasil langsung tampil di katalog.</p>
+            <a class="tautan-info" href="index.html">Coba cari →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= CARA KERJA ================= -->
+      <section class="bagian">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">HOW IT WORKS</p>
+            <h2>Mulai dari sini!</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Empat langkah sederhana untuk menemukan peluangmu.
+          </p>
+        </div>
+
+        <div class="grid-empat">
+          <article class="kartu-info">
+            <span class="bilangan">01</span>
+            <h3>Temukan</h3>
+            <p>Buka katalog beasiswa atau lomba, gunakan pencarian.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">02</span>
+            <h3>Pelajari</h3>
+            <p>Baca keterangan syarat dan deadline di kartu.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">03</span>
+            <h3>Persiapkan diri</h3>
+            <p>Siapkan dokumen sesuai situs resmi penyelenggara.</p>
+          </article>
+          <article class="kartu-info">
+            <span class="bilangan">04</span>
+            <h3>Raih peluang</h3>
+            <p>Daftar tepat waktu dan manfaatkan kesempatan sebaiknya.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= KATEGORI JELAJAH ================= -->
+      <section class="bagian">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">EXPLORE OPPORTUNITIES</p>
+            <h2>Temukan peluangmu</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Pilih jalur kesempatan yang ingin dijelajahi.
+          </p>
+        </div>
+
+        <div class="grid-tiga">
+          <article class="kartu-info">
+            <h3>Beasiswa pendidikan</h3>
+            <p>Dukungan biaya dan prestasi akademik.</p>
+            <a class="tautan-info" href="beasiswa.html">Buka katalog →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Kompetisi teknologi</h3>
+            <p>Inovasi, pemrograman, dan pengembangan digital.</p>
+            <a class="tautan-info" href="lomba.html">Buka katalog →</a>
+          </article>
+          <article class="kartu-info">
+            <h3>Kompetisi kreatif</h3>
+            <p>Desain, karya, dan kreativitas mahasiswa.</p>
+            <a class="tautan-info" href="lomba.html">Buka katalog →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= FAQ (pake <details> — berfunsi tanpa JavaScript) ================= -->
+      <section class="bagian" id="faq">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">PERTANYAAN YANG SERING DIAJUKAN</p>
+            <h2>FAQ</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Jawaban singkat beberapa pertanyaan umum.
+          </p>
+        </div>
+
+        <details class="pertanyaan">
+          <summary>Apa itu InfoCenter?</summary>
+          <p>
+            Situs pusat informasi beasiswa, kompetisi, dan peluang pengembangan
+            diri bagi mahasiswa.
+          </p>
+        </details>
+        <details class="pertanyaan">
+          <summary>Apakah informasi di InfoCenter gratis?</summary>
+          <p>
+            Ya. Situs ini turut memberikan informasi yang dapat diakses pengguna
+            tanpa biaya akses platform.
+          </p>
+        </details>
+        <details class="pertanyaan">
+          <summary>Bagaimana cara mencari beasiswa?</summary>
+          <p>
+            Buka menu Beasiswa, ketik kata kunci di kotak pencarian, atau pilih
+            kategori di wadah filter.
+          </p>
+        </details>
+        <details class="pertanyaan">
+          <summary>Apakah tersedia informasi perlombaan?</summary>
+          <p>
+            Ada di menu Lomba. Saat ini datanya masih contoh dan ditandai jelas
+            di halaman tersebut.
+          </p>
+        </details>
+        <details class="pertanyaan">
+          <summary>Bagaimana jika menemukan informasi baru?</summary>
+          <p>
+            Gunakan menu Kirim Info untuk mengusulkan informasi baru bagi
+            pengguna lain.
+          </p>
+        </details>
+        <details class="pertanyaan">
+          <summary>Apakah semua info selalu terbaru?</summary>
+          <p>
+            Tidak selalu. Selalu periksa situs resmi penyelenggara untuk
+            memastikan syarat dan jadwalnya.
+          </p>
+        </details>
+      </section>
+
+      <!-- ================= PITA AJAKAN ================= -->
+      <section class="pita-cta">
+        <div class="isi-pita">
+          <div>
+            <h2>Kesempatan tidak datang dua kali.</h2>
+            <p>
+              Mulai jelajahi peluang dan wujudkan potensi terbaikmu bersama
+              InfoCenter.
+            </p>
+          </div>
+          <a class="tombol tombol-krem" href="beasiswa.html">Cari beasiswa</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="isi-footer">
+        <div class="garis-footer">
+          <div>
+            <a class="logo" href="index.html">Info<span>Center.</span></a>
+            <p>Satu portal untuk beasiswa, lomba, dan peluang mahasiswa.</p>
+          </div>
+          <nav class="tautan-footer" aria-label="Tautan footer">
+            <a href="index.html">Beranda</a>
+            <a href="beasiswa.html">Beasiswa</a>
+            <a href="lomba.html">Lomba</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="peta.html">Peta</a>
+            <a href="kirim-info.html">Kirim Info</a>
+            <a href="tentang.html">Tentang</a>
+          </nav>
+        </div>
+        <div class="penutup-footer">
+          <p>© 2026 InfoCenter. Pusat informasi mahasiswa.</p>
+          <p>Data lomba adalah contoh · Formulir belum tersambung ke server.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

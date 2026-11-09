@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirim Info | InfoCenter</title>
+    <meta
+      name="description"
+      content="Formulir usulan informasi beasiswa/lomba. Belum tersambung ke server."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-halaman="kirim-info">
+    <a class="tautan-lompat" href="#konten">Lewati ke konten</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="isi-navbar">
+        <a class="logo" href="index.html">Info<span>Center.</span></a>
+
+        <nav class="menu" id="menu" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+
+          <div class="item-katalog">
+            <button
+              class="tombol-katalog"
+              id="tombolKatalog"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Buka menu katalog"
+            >
+              Katalog
+              <svg
+                class="ikon-pilih"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              class="menu-katalog"
+              id="menuKatalog"
+              aria-label="Kategori katalog"
+            >
+              <a href="beasiswa.html">Beasiswa</a>
+              <a href="lomba.html">Lomba</a>
+            </div>
+          </div>
+
+          <a href="dashboard.html">Dashboard</a>
+          <a href="peta.html">Peta</a>
+          <a href="kirim-info.html" class="active">Kirim Info</a>
+          <a href="tentang.html">Tentang</a>
+        </nav>
+
+        <button
+          class="tombol-menu"
+          id="tombolMenu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Buka atau tutup menu"
+        >
+          <svg
+            class="ikon-buka"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            class="ikon-tutup"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- ================= SAMPUL ================= -->
+      <section class="sampul-halaman">
+        <div class="isian-lebar">
+          <p class="mata-kata">BAGIKAN TEMUANMU</p>
+          <h1>Kirim <span>info.</span></h1>
+          <p>
+            Punya informasi beasiswa atau lomba yang belum ada di sini? Isi
+            formulir berikut. Setiap isian diperiksa langsung oleh JavaScript.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= FORMULIR ================= -->
+      <section class="bagian form-kirim">
+        <!-- novalidate: validasi HTML5 bawaan dimatikan karena sudah dicek di main.js -->
+        <form id="formKirim" novalidate>
+          <div class="kolom" id="kolomJudul">
+            <label class="keterangan-kolom" for="judul"
+              >Judul informasi <span class="tanda-wajib">*</span></label
+            >
+            <input
+              type="text"
+              id="judul"
+              maxlength="120"
+              placeholder="Contoh: Beasiswa Ini Membayarkan SPP 8 Semester"
+            />
+            <p class="pesan-gagal">
+              Judul wajib diisi (maksimal 120 karakter).
+            </p>
+          </div>
+
+          <div class="kolom" id="kolomIsi">
+            <label class="keterangan-kolom" for="isi"
+              >Isi informasi <span class="tanda-wajib">*</span></label
+            >
+            <textarea
+              id="isi"
+              placeholder="Tulis syarat pendaftaran, persiapan, dan petunjuk singkat…"
+            ></textarea>
+            <p class="hitung-karakter" id="hitungKarakter">0 / 5000 karakter</p>
+            <p class="pesan-gagal">Isi wajib diisi (maksimal 5000 karakter).</p>
+          </div>
+
+          <div class="baris-all">
+            <div class="kolom" id="kolomKategori">
+              <label class="keterangan-kolom" for="kategori"
+                >Kategori <span class="tanda-wajib">*</span></label
+              >
+              <select id="kategori">
+                <option value="">— Pilih kategori —</option>
+                <option>Beasiswa</option>
+                <option>Lomba akademik</option>
+                <option>Lomba non-akademik</option>
+              </select>
+              <p class="pesan-gagal">Silakan pilih salah satu kategori.</p>
+            </div>
+
+            <div class="kolom" id="kolomLampiran">
+              <span class="keterangan-kolom" id="labelLampiran"
+                >Lampiran (tidak wajib)</span
+              >
+              <!-- input berkas dibungkus label agar memilih berkas bisa diklik dari mana saja -->
+              <label class="kotak-unggah" for="lampiran">
+                <strong>Klik untuk memilih berkas</strong>
+                JPG, PNG, atau PDF · maksimal 10 MB
+                <input
+                  type="file"
+                  id="lampiran"
+                  accept=".jpg,.jpeg,.png,.pdf"
+                  aria-labelledby="labelLampiran"
+                />
+              </label>
+              <p id="namaLampiran" aria-live="polite"></p>
+              <p class="pesan-gagal">
+                Berkas harus JPG, PNG, atau PDF dan berukuran maksimal 10 MB.
+              </p>
+            </div>
+          </div>
+
+          <div class="aksi-form">
+            <button class="tombol tombol-rust" type="submit">Kirim Info</button>
+            <button class="tombol" type="reset">Reset</button>
+          </div>
+
+          <p class="keterangan-bagian" style="margin-top: 20px">
+            Formulir ini belum tersambung ke server — tidak ada data yang
+            dikirim ke mana pun. Notifikasi sukses hanya menandai bahwa
+            pengisian Anda sah.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Notifikasi kecil, muncul saat formulir valid (lihat css .toast) -->
+    <div class="toast" id="toast" role="status">
+      Terima kasih! Pengisian sudah sah. InfoCenter belum punya server, jadi
+      data tidak disimpan di mana pun.
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="isi-footer">
+        <div class="garis-footer">
+          <div>
+            <a class="logo" href="index.html">Info<span>Center.</span></a>
+            <p>Satu portal untuk beasiswa, lomba, dan peluang mahasiswa.</p>
+          </div>
+          <nav class="tautan-footer" aria-label="Tautan footer">
+            <a href="index.html">Beranda</a>
+            <a href="beasiswa.html">Beasiswa</a>
+            <a href="lomba.html">Lomba</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="peta.html">Peta</a>
+            <a href="kirim-info.html">Kirim Info</a>
+            <a href="tentang.html">Tentang</a>
+          </nav>
+        </div>
+        <div class="penutup-footer">
+          <p>© 2026 InfoCenter. Pusat informasi mahasiswa.</p>
+          <p>Data lomba adalah contoh · Formulir belum tersambung ke server.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

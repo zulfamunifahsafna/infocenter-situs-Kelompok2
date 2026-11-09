@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | InfoCenter</title>
+    <meta
+      name="description"
+      content="Ringkasan informasi beasiswa dan lomba; angka dihitung dari data situs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-halaman="dashboard">
+    <a class="tautan-lompat" href="#konten">Lewati ke konten</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="isi-navbar">
+        <a class="logo" href="index.html">Info<span>Center.</span></a>
+
+        <nav class="menu" id="menu" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+
+          <div class="item-katalog">
+            <button
+              class="tombol-katalog"
+              id="tombolKatalog"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Buka menu katalog"
+            >
+              Katalog
+              <svg
+                class="ikon-pilih"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              class="menu-katalog"
+              id="menuKatalog"
+              aria-label="Kategori katalog"
+            >
+              <a href="beasiswa.html">Beasiswa</a>
+              <a href="lomba.html">Lomba</a>
+            </div>
+          </div>
+
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="peta.html">Peta</a>
+          <a href="kirim-info.html">Kirim Info</a>
+          <a href="tentang.html">Tentang</a>
+        </nav>
+
+        <button
+          class="tombol-menu"
+          id="tombolMenu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Buka atau tutup menu"
+        >
+          <svg
+            class="ikon-buka"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            class="ikon-tutup"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- ================= SEMBUTAN ================= -->
+      <section class="welcome">
+        <div class="isian-lebar">
+          <p class="mata-kata">SELAMAT DATANG DI INFOCENTER</p>
+          <h1>Dashboard Informasi</h1>
+          <p>
+            Ringkasan beasiswa dan lomba yang tersedia di situs ini. Semua angka
+            dihitung langsung dari data — bukan angka terpaku.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= STATISTIK ================= -->
+      <section class="strip-statistik" aria-label="Statistik">
+        <article class="item-statistik">
+          <h2 id="angkaTotal">0</h2>
+          <p>Total info</p>
+        </article>
+        <article class="item-statistik">
+          <h2 id="angkaBeasiswa">0</h2>
+          <p>Beasiswa</p>
+        </article>
+        <article class="item-statistik">
+          <h2 id="angkaLombaAkademik">0</h2>
+          <p>Lomba akademik</p>
+        </article>
+        <article class="item-statistik">
+          <h2 id="angkaLombaNon">0</h2>
+          <p>Lomba non-akademik</p>
+        </article>
+      </section>
+
+      <!-- ================= GRAFIK + PINTASAN ================= -->
+      <section class="grid-dashboard">
+        <article class="panel">
+          <h2>Komposisi Peluang</h2>
+          <p class="keterangan-panel">
+            Diagram donat menampilkan proporsi beasiswa dan lomba — angkanya
+            dihitung langsung dari data situs, bukan ditulis manual.
+          </p>
+          <!-- Wadah kosong: diisi pasangGrafik() dari js/main.js -->
+          <div id="wadahGrafik"></div>
+          <p class="keterangan-panel">Grafik Highcharts dimuat lewat internet.</p>
+        </article>
+
+        <aside class="panel">
+          <h2>Pintasan Cepat</h2>
+          <div class="lita-pintas">
+            <a class="tombol tombol-rust" href="beasiswa.html">Beasiswa →</a>
+            <a class="tombol" href="lomba.html">Lomba →</a>
+            <a class="tombol" href="peta.html">Peta peluang →</a>
+            <a class="tombol" href="tentang.html">Tentang kami →</a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ================= TABEL DATA LENGKAP ================= -->
+      <section class="bagian">
+        <article class="panel">
+          <h2>Data Lengkap Peluang</h2>
+          <p class="keterangan-panel">
+            Semua item diurutkan dari deadline terdekat di atas. Data lomba
+            adalah contoh dari arsip peta dan ditandai jelas per baris.
+          </p>
+
+          <div class="tabel-scroll">
+            <table class="tabel-data">
+              <caption class="teks-tersembunyi">
+                Daftar lengkap beasiswa dan lomba InfoCenter, urut deadline
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Penyelenggara</th>
+                  <th scope="col">Kategori</th>
+                  <th scope="col">Lokasi</th>
+                  <th scope="col">Deadline</th>
+                  <th scope="col">Tautan</th>
+                </tr>
+              </thead>
+              <!-- Baris tabel dibuat oleh pasangTabelData() dari js/data.js -->
+              <tbody id="tubuhTabel"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="isi-footer">
+        <div class="garis-footer">
+          <div>
+            <a class="logo" href="index.html">Info<span>Center.</span></a>
+            <p>Satu portal untuk beasiswa, lomba, dan peluang mahasiswa.</p>
+          </div>
+          <nav class="tautan-footer" aria-label="Tautan footer">
+            <a href="index.html">Beranda</a>
+            <a href="beasiswa.html">Beasiswa</a>
+            <a href="lomba.html">Lomba</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="peta.html">Peta</a>
+            <a href="kirim-info.html">Kirim Info</a>
+            <a href="tentang.html">Tentang</a>
+          </nav>
+        </div>
+        <div class="penutup-footer">
+          <p>© 2026 InfoCenter. Pusat informasi mahasiswa.</p>
+          <p>Data lomba adalah contoh · Formulir belum tersambung ke server.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Urutan skrip: Highcharts dulu (grafik), lalu data, lalu kode halaman.
+         Grafik & peta memakai CDN, jadi butuh internet. -->
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11.4.8/highcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@11.4.8/modules/accessibility.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

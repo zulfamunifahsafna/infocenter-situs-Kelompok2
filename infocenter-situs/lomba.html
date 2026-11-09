@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lomba | InfoCenter</title>
+    <meta
+      name="description"
+      content="Katalog lomba mahasiswa: pencarian, filter kategori, deadline, penyelenggara, dan lokasi. Data contoh bertanda jelas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-halaman="lomba">
+    <a class="tautan-lompat" href="#konten">Lewati ke konten</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="isi-navbar">
+        <a class="logo" href="index.html">Info<span>Center.</span></a>
+
+        <nav class="menu" id="menu" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+
+          <div class="item-katalog">
+            <button
+              class="tombol-katalog active"
+              id="tombolKatalog"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Buka menu katalog"
+            >
+              Katalog
+              <svg
+                class="ikon-pilih"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              class="menu-katalog"
+              id="menuKatalog"
+              aria-label="Kategori katalog"
+            >
+              <a href="beasiswa.html">Beasiswa</a>
+              <a href="lomba.html" class="active">Lomba</a>
+            </div>
+          </div>
+
+          <a href="dashboard.html">Dashboard</a>
+          <a href="peta.html">Peta</a>
+          <a href="kirim-info.html">Kirim Info</a>
+          <a href="tentang.html">Tentang</a>
+        </nav>
+
+        <button
+          class="tombol-menu"
+          id="tombolMenu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Buka atau tutup menu"
+        >
+          <svg
+            class="ikon-buka"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg
+            class="ikon-tutup"
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- ================= SAMPUL HALAMAN (sirak dengan halaman Beasiswa) ================= -->
+      <section class="sampul-halaman">
+        <div class="isian-lebar">
+          <p class="mata-kata">INFORMASI KOMPETISI</p>
+          <h1>Adu gagasan,<br /><span>perluas pengalaman.</span></h1>
+          <p>
+            Temukan kompetisi akademik dan non-akademik mahasiswa. Semua data di
+            halaman ini adalah <strong>contoh</strong> dari proyek fitur peta —
+            tautan pendaftaran resminya belum tersedia.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= STATISTIK ================= -->
+      <section class="strip-statistik" aria-label="Statistik lomba">
+        <article class="item-statistik">
+          <h2>02</h2>
+          <p>Kategori lomba</p>
+        </article>
+        <article class="item-statistik">
+          <h2 id="jumlahPeluang">0</h2>
+          <p>Informasi lomba</p>
+        </article>
+        <article class="item-statistik">
+          <h2 id="jumlahPetaItem">0</h2>
+          <p>Item tampil di peta</p>
+        </article>
+      </section>
+
+      <!-- ================= KATEGORI ================= -->
+      <section class="bagian">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">JELAJAHI PELUANG</p>
+            <h2>Kategori Lomba</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Pelabelan akademik dan non-akademik mengikuti contoh data — pekan
+            berikutnya bisa disesuaikan saat data asli tersedia.
+          </p>
+        </div>
+
+        <div class="grid-kategori">
+          <button class="kartu-kategori" data-kategori="akademik" type="button">
+            <span class="nomor-kategori">01</span>
+            <h3>Akademik</h3>
+            <p>Kompetisi ilmiah, program, dan penalaran.</p>
+            <span class="panah-kategori" aria-hidden="true">↗</span>
+          </button>
+
+          <button
+            class="kartu-kategori"
+            data-kategori="non-akademik"
+            type="button"
+          >
+            <span class="nomor-kategori">02</span>
+            <h3>Non-akademik</h3>
+            <p>Karya desain, seni, dan kemampuan khusus.</p>
+            <span class="panah-kategori" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= DAFTAR LOMBA ================= -->
+      <section class="bagian" id="daftar">
+        <div class="kepala-bagian">
+          <div>
+            <p class="mata-kata">DAFTAR PELUANG</p>
+            <h2>Informasi Lomba</h2>
+          </div>
+          <p class="keterangan-bagian">
+            Setiap kartu menampilkan deadline, penyelenggara, dan lokasi. Kartu
+            tanpa tautan resmi diberi catatan jelas.
+          </p>
+        </div>
+
+        <div class="bar-filter">
+          <div class="kotak-cari">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20.5 20.5l-4.2-4.2" />
+            </svg>
+            <input
+              type="text"
+              id="kotakCari"
+              aria-label="Cari nama lomba atau penyelenggara"
+              placeholder="Cari nama lomba atau penyelenggara…"
+            />
+          </div>
+
+          <select id="pilihKategori" aria-label="Filter kategori lomba">
+            <option value="semua">Semua kategori</option>
+            <option value="akademik">Akademik</option>
+            <option value="non-akademik">Non-akademik</option>
+          </select>
+
+          <button id="tombolReset" class="tombol tombol-reset" type="button">
+            Reset
+          </button>
+        </div>
+
+        <div class="daftar-peluang" id="daftarPeluang"></div>
+
+        <div class="pesan-kosong" id="pesanKosong" hidden>
+          Lomba yang kamu cari belum ditemukan. Coba kata kunci lain atau tekan
+          tombol Reset.
+        </div>
+      </section>
+
+      <!-- ================= PITA AJAKAN ================= -->
+      <section class="pita-cta">
+        <div class="isi-pita">
+          <div>
+            <h2>Setiap lomba juga tampil di peta.</h2>
+            <p>
+              Marker pada peta menunjukkan lokasi universitas penyelenggara.
+            </p>
+          </div>
+          <a class="tombol tombol-krem" href="peta.html">Buka Peta</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="isi-footer">
+        <div class="garis-footer">
+          <div>
+            <a class="logo" href="index.html">Info<span>Center.</span></a>
+            <p>Satu portal untuk beasiswa, lomba, dan peluang mahasiswa.</p>
+          </div>
+          <nav class="tautan-footer" aria-label="Tautan footer">
+            <a href="index.html">Beranda</a>
+            <a href="beasiswa.html">Beasiswa</a>
+            <a href="lomba.html">Lomba</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="peta.html">Peta</a>
+            <a href="kirim-info.html">Kirim Info</a>
+            <a href="tentang.html">Tentang</a>
+          </nav>
+        </div>
+        <div class="penutup-footer">
+          <p>© 2026 InfoCenter. Pusat informasi mahasiswa.</p>
+          <p>Data lomba adalah contoh · Tautan resmi belum tersedia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
